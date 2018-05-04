@@ -76,7 +76,7 @@ mesh_kwargs['mesh_size'] = {'mode': 'constant',
                             'value': 10, 'bound_value': 10}
 
 domain = {'xmin': 0, 'xmax': 700, 'ymin': 0, 'ymax': 600}
-gb = importer.from_csv('network.csv', mesh_kwargs, domain)
+gb = importer.dfm_2d_from_csv('network.csv', mesh_kwargs, domain)
 gb.compute_geometry()
 co.coarsen(gb, 'by_volume')
 gb.assign_node_ordering()
